@@ -114,4 +114,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Form1_button2_Click_Failed_to_send_the_message_" xml:space="preserve">
+    <value>Failed to send the message.</value>
+  </data>
+  <data name="Form1_button2_Click_" xml:space="preserve">
+    <value>Message has been sent from: 
+</value>
+  </data>
 </root>
