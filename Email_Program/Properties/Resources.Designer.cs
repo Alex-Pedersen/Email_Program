@@ -61,21 +61,29 @@ namespace Email_Program.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Message has been sent from: 
-        ///.
-        /// </summary>
-        internal static string Form1_button2_Click_ {
-            get {
-                return ResourceManager.GetString("Form1_button2_Click_", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Failed to send the message..
+        ///   Looks up a localized string similar to Failed to send the message:.
         /// </summary>
         internal static string Form1_button2_Click_Failed_to_send_the_message_ {
             get {
                 return ResourceManager.GetString("Form1_button2_Click_Failed_to_send_the_message_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Message has been sent from  .
+        /// </summary>
+        internal static string Form1_button2_Click_Message_has_been_sent_from__ {
+            get {
+                return ResourceManager.GetString("Form1_button2_Click_Message_has_been_sent_from__", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Message has been sent to :.
+        /// </summary>
+        internal static string Form1_button2_Click_Message_has_been_sent_to__ {
+            get {
+                return ResourceManager.GetString("Form1_button2_Click_Message_has_been_sent_to__", resourceCulture);
             }
         }
     }

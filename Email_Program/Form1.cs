@@ -39,28 +39,27 @@ namespace Email_Program
                 message.To.Add(emailReceiverBox.Text); //Puts receiver's email into message
                 message.Body = emailBodyBox.Text; //Puts the body of the email into the message
                 message.Subject = emailSubjectBox.Text; //Puts the subject into the message
+
                 client.UseDefaultCredentials = false; //Overrides default credentials
                 client.EnableSsl = true; //Enables ssl security
 
-                if (emailAttachmentBox.Text != "") //Checking whether or not there's an attachment
+                if (emailAttachmentBox.Text != string.Empty) //Checking whether or not there's an attachment
                 {
                     message.Attachments.Add(new Attachment(emailAttachmentBox.Text));
                 }
-                client.Credentials = new NetworkCredential(emailBox.Text, emailPassWordBox.Text);
-                    //Creates a credentials object
+
+                client.Credentials = new NetworkCredential(emailBox.Text, emailPassWordBox.Text); //Creates a credentials object
                 client.Send(message); //Sends the message
-                MessageBox.Show(Resources.Form1_button2_Click_ + emailBox.Text + Resources.Form1_button2_Click_ +
-                                emailReceiverBox.Text);
+
+                MessageBox.Show(Resources.Form1_button2_Click_Message_has_been_sent_from__ + Environment.NewLine + emailBox.Text + Environment.NewLine + Resources.Form1_button2_Click_Message_has_been_sent_to__ + Environment.NewLine + emailReceiverBox.Text);
 
                 setTextBoxNull(new[]
-                {  
-                emailReceiverBox,
-                emailAttachmentBox,
-                emailSubjectBox,
-                emailBodyBox
+                {
+                    emailReceiverBox,
+                    emailAttachmentBox,
+                    emailSubjectBox,
+                    emailBodyBox
                 });
-
-                message = null; //Sets the message to null when the message has been sent
             }
             catch (Exception s)
             {
