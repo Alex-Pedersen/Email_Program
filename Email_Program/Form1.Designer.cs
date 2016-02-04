@@ -109,6 +109,7 @@
             // 
             // emailAttachmentBox
             // 
+            this.emailAttachmentBox.HideSelection = false;
             this.emailAttachmentBox.Location = new System.Drawing.Point(108, 76);
             this.emailAttachmentBox.Name = "emailAttachmentBox";
             this.emailAttachmentBox.ReadOnly = true;
@@ -138,6 +139,7 @@
             this.emailPassWordBox.Name = "emailPassWordBox";
             this.emailPassWordBox.Size = new System.Drawing.Size(201, 20);
             this.emailPassWordBox.TabIndex = 1;
+            this.emailPassWordBox.UseSystemPasswordChar = true;
             // 
             // button1
             // 
