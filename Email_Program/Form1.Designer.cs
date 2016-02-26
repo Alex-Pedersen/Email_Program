@@ -1,4 +1,9 @@
-﻿namespace Email_Program
+﻿using System;
+using System.ComponentModel;
+using System.Configuration;
+using System.Windows.Forms;
+
+namespace Email_Program
 {
     partial class Form1
     {
@@ -230,6 +235,108 @@
         private System.Windows.Forms.TextBox emailBodyBox;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button button3;
+
+        public Button Button1
+        {
+            get { return button1; }
+            set { button1 = value; }
+        }
+
+        public Button Button2
+        {
+            get { return button2; }
+            set { button2 = value; }
+        }
+
+        public Button Button3
+        {
+            get { return button3; }
+            set { button3 = value; }
+        }
+
+        public IContainer Components
+        {
+            get { return components; }
+            set { components = value; }
+        }
+
+        public TextBox EmailAttachmentBox
+        {
+            get { return emailAttachmentBox; }
+            set { emailAttachmentBox = value; }
+        }
+
+        public TextBox EmailBodyBox
+        {
+            get { return emailBodyBox; }
+            set { emailBodyBox = value; }
+        }
+
+        public TextBox EmailBox
+        {
+            get { return emailBox; }
+            set { emailBox = value; }
+        }
+
+        public TextBox EmailPassWordBox
+        {
+            get { return emailPassWordBox; }
+            set { emailPassWordBox = value; }
+        }
+
+        public TextBox EmailReceiverBox
+        {
+            get { return emailReceiverBox; }
+            set { emailReceiverBox = value; }
+        }
+
+        public TextBox EmailSubjectBox
+        {
+            get { return emailSubjectBox; }
+            set { emailSubjectBox = value; }
+        }
+
+        public Label Label1
+        {
+            get { return label1; }
+            set { label1 = value; }
+        }
+
+        public Label Label2
+        {
+            get { return label2; }
+            set { label2 = value; }
+        }
+
+        public Label Label3
+        {
+            get { return label3; }
+            set { label3 = value; }
+        }
+
+        public Label Label4
+        {
+            get { return label4; }
+            set { label4 = value; }
+        }
+
+        public Label Label5
+        {
+            get { return label5; }
+            set { label5 = value; }
+        }
+
+        public Label Label6
+        {
+            get { return label6; }
+            set { label6 = value; }
+        }
+
+        public OpenFileDialog OpenFileDialog1
+        {
+            get { return openFileDialog1; }
+            set { openFileDialog1 = value; }
+        }
     }
 }
 

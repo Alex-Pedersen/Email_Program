@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Net;
 using System.Net.Mail;
 using System.Windows.Forms;
@@ -11,6 +12,8 @@ namespace Email_Program
         public Form1()
         {
             InitializeComponent();
+            emailBox.Text = ConfigurationManager.AppSettings["email"];
+            emailPassWordBox.Text = ConfigurationManager.AppSettings["password"];
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -38,7 +41,7 @@ namespace Email_Program
                 message.From = new MailAddress(emailBox.Text); //Puts your email ID into message
                 message.To.Add(emailReceiverBox.Text); //Puts receiver's email into message
                 message.Body = emailBodyBox.Text; //Puts the body of the email into the message
-                message.Subject = emailSubjectBox.Text; //Puts the subject into the message
+                message.Subject = emailSubjectBox.Text; //Puts the subject into the 
 
                 client.UseDefaultCredentials = false; //Overrides default credentials
                 client.EnableSsl = true; //Enables ssl security
