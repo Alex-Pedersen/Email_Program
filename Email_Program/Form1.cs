@@ -7,21 +7,14 @@ using Email_Program.Properties;
 
 namespace Email_Program
 {
-    public partial class Form1 : Form
+    public partial class
+        Form1 : Form
     {
         public Form1()
         {
             InitializeComponent();
             emailBox.Text = ConfigurationManager.AppSettings["email"];
             emailPassWordBox.Text = ConfigurationManager.AppSettings["password"];
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -51,10 +44,14 @@ namespace Email_Program
                     message.Attachments.Add(new Attachment(emailAttachmentBox.Text));
                 }
 
-                client.Credentials = new NetworkCredential(emailBox.Text, emailPassWordBox.Text); //Creates a credentials object
+                client.Credentials = new NetworkCredential(emailBox.Text, emailPassWordBox.Text);
+                    //Creates a credentials object
                 client.Send(message); //Sends the message
 
-                MessageBox.Show(Resources.Form1_button2_Click_Message_has_been_sent_from__ + Environment.NewLine + emailBox.Text + Environment.NewLine + Resources.Form1_button2_Click_Message_has_been_sent_to__ + Environment.NewLine + emailReceiverBox.Text);
+                MessageBox.Show(Resources.Form1_button2_Click_Message_has_been_sent_from__ + Environment.NewLine +
+                                emailBox.Text + Environment.NewLine +
+                                Resources.Form1_button2_Click_Message_has_been_sent_to__ + Environment.NewLine +
+                                emailReceiverBox.Text);
 
                 setTextBoxNull(new[]
                 {
